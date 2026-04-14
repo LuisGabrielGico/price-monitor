@@ -161,7 +161,7 @@ https://books.toscrape.com
 
 ## 🔗 Live Demo
 
-Dashboard:
-(ADD YOUR STREAMLIT LINK HERE)
+- 📊 Dashboard: https://price-monitor-hn9dmxxb9ej5j4smcmapzu.streamlit.app/
+- 🗄️ Database: PostgreSQL (Cloud - Neon)
 
 ---
