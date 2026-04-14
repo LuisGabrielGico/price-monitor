@@ -1,1 +1,3 @@
-DB_URL="postgresql://neondb_owner:npg_ieuxsr5qBDH4@ep-young-smoke-acglebir-pooler.sa-east-1.aws.neon.tech/postgre?sslmode=require&channel_binding=require"
+import os
+
+DB_URL = os.getenv("DB_URL")
