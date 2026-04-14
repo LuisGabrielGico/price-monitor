@@ -15,14 +15,18 @@ engine=create_engine(DB_URL)
 def home():
     return{"message": "Price monitoring API"}
 
-@app.get("/products", summary="List all the products")
+@app.get("/products")
 def get_products():
-    df=pd.read_sql("SELECT * FROM books", engine)
+    try:
+        df = pd.read_sql("SELECT * FROM books", engine)
 
-    return {
-        "total": len(df),
-        "data": df.to_dict(orient="records")
-    }
+        return {
+            "total": len(df),
+            "data": df.to_dict(orient="records")
+        }
+
+    except Exception as e:
+        return {"error": str(e)}
 
 @app.get("/products/filter", summary="Filter products by price")
 def filter_products(max_price: float):
